@@ -5,6 +5,11 @@ Quickstart:
 [user@host ~]$ sudo yum install -y vagrant
 [user@host ~]$ git clone https://github.com/bganne/nvme-tcp
 [user@host ~]$ cd nvme-tcp
+# this will fail because of the reboot for the new kernel on the target
 [user@host ~]$ vagrant up
+# this will fail because of the reboot for the new kernel on the initiator
+[user@host ~]$ vagrant up
+# VMs are ready, restart everything to a clean state
+[user@host ~]$ vagrant reload
 [user@host ~]$ vagrant ssh initiator
 [vagrant@nvme_tcp-initiator ~]$ sudo nvme list
