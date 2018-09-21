@@ -1,0 +1,10 @@
+Environment to experiment with NVMe-TCP
+This creates 2 CentOS VM, 1 NVMe target and 1 NVMe-TCP initiator.
+
+Quickstart:
+[user@host ~]$ sudo yum install -y vagrant
+[user@host ~]$ git clone https://github.com/bganne/nvme-tcp
+[user@host ~]$ cd nvme-tcp
+[user@host ~]$ vagrant up
+[user@host ~]$ vagrant ssh initiator
+[vagrant@nvme_tcp-initiator ~]$ sudo nvme list
